@@ -1,0 +1,425 @@
+\documentclass[a4paper,11pt]{article}
+
+%A Few Useful Packages
+\usepackage{marvosym}
+%\usepackage{fontspec} 					%for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+%\usepackage{fullpage}
+
+%\usepackage[big]{layaureo} 				%better formatting of the A4 page
+\usepackage[bottom=0.5cm,top=0.7cm,right=1.5cm,left=1.5cm]{geometry}
+% an alternative to Layaureo can be ** \usepackage{fullpage} **
+\usepackage{supertabular} 				%for Grades
+\usepackage{titlesec}					%custom \section
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+%FONTS
+\defaultfontfeatures{Mapping=tex-text}
+%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
+%%% modified for Karol Kozioł for ShareLaTeX use
+%\setmainfont[
+%SmallCapsFont = Fontin-SmallCaps.otf,
+%BoldFont = Fontin-Bold.otf,
+%ItalicFont = Fontin-Italic.otf
+%]
+%{Fontin.otf}
+%%%
+\usepackage{helvet}
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing\section{0em}{0.5em}{0.25em}
+
+%Tweak a bit the top margin
+%\addtolength{\voffset}{-1.8cm}
+
+%Italian hyphenation for the word: ''corporations''
+\hyphenation{im-pre-se}
+
+%-------------WATERMARK TEST [**not part of a CV**]---------------
+\usepackage[absolute]{textpos}
+
+\setlength{\TPHorizModule}{35mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\textblockorigin{2mm}{0.65\paperheight}
+\setlength{\parindent}{0pt}
+
+%--------------------BEGIN DOCUMENT----------------------
+\begin{document}
+
+%WATERMARK TEST [**not part of a CV**]---------------
+%\font\wm=''Baskerville:color=787878'' at 8pt
+%\font\wmweb=''Baskerville:color=FF1493'' at 8pt
+%{\wm 
+%	\begin{textblock}{1}(0,0)
+%		\rotatebox{-90}{\parbox{500mm}{
+%			Typeset by Alessandro Plasmati with \XeTeX\  \today\ for 
+%			{\wmweb \href{http://www.aleplasmati.comuv.com}{aleplasmati.comuv.com}}
+%		}
+%	}
+%	\end{textblock}
+%}
+
+\pagestyle{empty} % non-numbered pages
+
+\font\fb=''[cmr10]'' %for use with \LaTeX command
+
+%--------------------TITLE-------------
+\par{\centering
+		{\Huge  \textsc{Guillem Duran Ballester}
+	}\bigskip\par}
+
+\par{\centering{	
+\begin{tabular}{p{2.5cm}cccccc}
+    &\textsc{Phone:}     & +34 662 093000 &
+    \textsc{email:}     & \href{mailto:guillem.db@gmail.com}{guillem.db@gmail.com} &
+    \textsc{Github:}     & \href{https://github.com/Guillem-db}{guillem-db}\\
+\end{tabular}
+}}
+
+%\centering{
+
+%\begin{tabular}{lllll}\n
+%\toprule 
+% \n\textbf{Phone} & \textbf{Email} & \textbf{Github} \\\\\n
+%\midrule\n   +34 662 09300 &  \href{mailto:guillem.db@gmail.com}{guillem.db@gmail.com} & %\href{https://github.com/Guillem-db}{guillem-db}\\\n
+
+%\bottomrule\n
+%\end{tabular}\n
+%\end{center}
+%}
+
+%--------------------SECTIONS-----------------------------------
+%Section: Personal Data
+%\resizebox{\textwidth}{!}{%{
+
+%}
+
+
+
+%\begin{tabular}{rl}
+%    \textsc{Place and Date of Birth:} & Palma de Mallorca, Spain  | 16 February 1990 \\
+%    \textsc{Address:}   & Emili Darder Batle 12 6c, 07013,Palma, Balears, Spain \\
+%    \textsc{Phone:}     & +34 662 09300\\
+%    \textsc{email:}     & \href{mailto:guillem.db@gmail.com}{guillem.db@gmail.com}\\
+%   \textsc{Github:}     & \href{https://github.com/Guillem-db}{guillem-db}
+%\end{tabular}
+
+
+
+
+%Section: Work Experience at the top
+\section{Accomplishments}
+
+%\begin{tabular}{l|p{11cm}}
+\begin{tabular}{cc}
+    \begin{minipage}{.5\linewidth}
+\begin{tabular}{p{1.5cm}|p{5.5cm}}
+\multicolumn{2}{c}{\Large Education \& Papers} \\\multicolumn{2}{c}{}\\
+
+ \textsc{Jun 2018} & \textbf{Solving Atari Games Using Fractals And Entropy, \href{https://arxiv.org/abs/1807.01081}{\emph{Arxiv.org (In revision)} }}
+ \\\multicolumn{2}{c}{}\\
+
+\textsc{Aug.}  & \textbf{Happiness, an inside job}\\2017&\href{https://dl.acm.org/citation.cfm?id=3110132}{\emph{ASONAM 2017}}\\&\footnotesize{\textit{Churn prediction using employee likability, engagement and relative happiness}}\\\multicolumn{2}{c}{}\\
+
+ \textsc{May 2017} & \textbf{General Algorithmic Search, \href{https://arxiv.org/abs/1705.08691}{\emph{Arxiv.org} }}
+ \\\multicolumn{2}{c}{}\\
+
+\textsc{Oct.} 2016 & Degree Telecom. engineering: spec. in \href{https://eetac.upc.edu/en/study/bachelors-deegrees/telematics-engineering}{\textsc{Telematics}}, \textbf{Politechnic Univ. of Catalonia}, Spain\\&\footnotesize{\textit{Thesis: 'Time series and graph analysis in the Jupyter notebook'}}\\
+
+ \multicolumn{2}{c}{}\\\multicolumn{2}{c}{}\\\multicolumn{2}{c}{\Large Work experience} \\\multicolumn{2}{c}{}\\
+
+\textsc{May 2017 - Present} & \href{http://faculty.uaeu.ac.ae/jose/}{ \textbf{Research assistant}} at \textsc{University of the United Arab Emirates} (Al Ain - Abu Dhabi), UAE.  \emph{Robots and media lab}\multicolumn{2}{c}{}\\
+
+\textsc{Jan - May 2017} & \textbf{Freelance data scientist}, Palma de Mallorca, Spain\multicolumn{2}{c}{}\\
+
+\textsc{Jul - Dec 2017} & \href{http://faculty.uaeu.ac.ae/jose/}{ \textbf{AI engineer}} at \textsc{Source\{d\}} Madrid, Spain.  \emph{Reinforcement learning research}\multicolumn{2}{c}{}\\
+
+
+\textsc{Dec 2016 - Present} & \href{http://cio.umh.es/en/investigacion/investigadores/jmamigo}{\textbf{Team member}} at \emph{Aplicaciones de los Sistemas Dinámicos Discretos y Continuos, MTM2016-74921-P (AEI/FEDER, UE)}. \textsc{UMH Univ.}, Elche, Spain \multicolumn{2}{c}{}\\
+
+ \textsc{Jan - Dec 2016} & \textbf{AI researcher} at \textsc{HCSoft Programación S.L}, Murcia, Spain.  \emph{Metaheuristic and AI research}\multicolumn{2}{c}{}\\
+
+\textsc{Jun-Dec 2014} & \textbf{Cloud computing DevOps internship} at \textsc{UPC}. \footnotesize{Installed, configured and administrated an OpenNebula-based cloud computing.}\\\multicolumn{2}{c}{}\\
+
+\multicolumn{2}{c}{}
+\end{tabular}
+\end{minipage} &
+\begin{minipage}{.5\linewidth}
+
+%Section: Scholarships and additional info
+%\section{Talks and lectures}
+
+\begin{tabular}{p{1cm}|p{7cm}}
+\multicolumn{2}{c}{}\\\multicolumn{2}{c}{}\\\multicolumn{2}{c}{\Large Talks} \\\multicolumn{2}{c}{}\\
+
+\textsc{Oct.}  & \textbf{\href{https://2018.es.pycon.org/}{Talk \& Workshop PyCon ES (Accepted)}}\\2018&\emph{Talk: Hacking RL (Spanish version); Workshop: Introduction to data science Workshop}\\&\\\multicolumn{2}{c}{}\\
+
+\textsc{Jul.}  & \textbf{\href{https://ep2018.europython.eu/conference/talks/hacking-reinforcement-learning}{Talk at EuroPython 2018}}\\2018&\emph{Hacking Reinforcement Learning}\\&\footnotesize{\textit{Presenting planing algorithms derived from Fractal AI theory for playing Atari at a superhuman level.}}\\\multicolumn{2}{c}{}\\
+
+
+\textsc{Nov.}  & \textbf{\href{https://twitter.com/Miau_DB/status/926728441247993856}{Invited speaker to PiterPy 2017 conferences}}\\2017&\emph{Reinforcement learning for developers}\\&\footnotesize{\textit{An introduction to RL with Rick \& Morty }}\\\multicolumn{2}{c}{}\\
+
+
+\textsc{Jul.}  & \textbf{\href{https://www.youtube.com/watch?time_continue=1\&v=JUErYqjf5Zw}{Talk at EuroPython 2017} }\\2017&\emph{Inside Airbnb: Visualizing data that includes geographic locations}\\&\\\multicolumn{2}{c}{}\\
+
+\textsc{May.}  & \textbf{\href{https://pydata.org/barcelona2017/schedule/presentation/19/}{Talk at PyData Barcelona}}\\2017&\emph{Happiness inside a job: a social network analysis.}\\& \footnotesize{\textit{A talk about how to apply social network analysis techniques to machine learning.}}\\\multicolumn{2}{c}{}\\
+
+\textsc{Mar.}  & \textbf{Lecture at Universidad de Zaragoza}\\2017&\emph{Introduction to Fractal AI theory for researchers and Phd. students. (10 Hours)}\\&\footnotesize{\textit{Introductory course to fractal AI methods for solving complex artificial intelligence environments.}}\\\multicolumn{2}{c}{}\\
+
+\textsc{Feb.} & \textbf{\href{https://github.com/PyDataMallorca/WS_Introduction_to_data_science}{Workshop at PyData Mallorca}}\\2017&\emph{Introduction to data science (5 Hours)}\\\multicolumn{2}{c}{}\\
+
+\textsc{oct.}  & \textbf{\href{https://github.com/Guillem-db/PyconEs-2016/blob/master/PSAD\%20Cosmic\%20Billiards.ipynb}{Talk at PyconEs 2016}}\\2016&\emph{Per Shaolin ad astra.}\\&\footnotesize{ \textit{How to calculate and visualize the trajectory of the Juno spacecraft using Shaolin.}}\\\multicolumn{2}{c}{}\\
+
+\textsc{Jul.} & \textbf{\href{https://ep2016.europython.eu/conference/talks/interactive-data-kung-fu-with-shaolin}{Hot topic talk at EuroPython 2016}}\\2016&\emph{Interactive Data Kung Fu with \href{https://github.com/HCsoft-RD/shaolin/tree/master/examples}{Shaolin}.}\\&\footnotesize{\textit{Interactive data visualization using Shaolin, a python library I programmed}}
+\\\multicolumn{2}{c}{}\\\multicolumn{2}{c}{}
+\\\multicolumn{2}{c}{}\\
+\end{tabular}
+
+\end{minipage}
+
+%\end{minipage}
+\end{tabular}
+
+
+
+
+
+\section{AI Research experience}
+
+Over the years, I have managed to develop Fractal AI, a research project consisting on a theory of artificial intelligence based on first principles. I am part of a two people team that managed to develop a concept into a working theory, and developed a new family of planning algorithms that greatly outperform any other existing alternative.
+
+\textbf{As an undergraduate} I researched on artificial intelligence as a hobby. During this time, I helped develop the theoretical foundations of our theory, and helped design and test a new set of environments to be solved by our agents.
+
+At \textbf{HCSoft}, I developed and tested our novel AI theory, and learned how to find creative solutions to overcome technical limitations. My work there involved writing a Python implementation of our algorithms to be used with OpenAI gym, and as a global optimization algorithm. I also was in charge of designing and writing visualization and debugging tools.
+
+At, \textbf{Source\{d\}}, I applied our techniques to leverage Reinforcement Learning algorithms. I learned how to communicate and work with a team, and follow good software development practices.
+
+At, \textbf{UAE University}, I developed tools to generate high quality Reinforcement Learning datasets ready to use for research, and scaled our algorithms to be used in an Amazon Web services cluster.
+
+We have published our findings as an \href{https://github.com/FragileTheory/FractalAI}{open source project}, and have documented our research in a \href{http://entropicai.blogspot.com.es/2017/06/openai-first-record.html}{blog} and a \href{https://www.youtube.com/user/finaysergio/videos}{YouTube} channel:\\
+
+
+\begin{tabular}{ccc}
+ \begin{minipage}{.30\linewidth}
+        \large \textbf{Skills developed}
+        \normalsize
+        \begin{itemize}
+          \item I'm an very fast learner
+          \item I'm highly motivated
+          \item Knowledge sharing
+          \item Understanding AI papers
+          \item Proposing new approaches to solve existing problems
+          
+        \end{itemize}
+    \end{minipage} & 
+    \begin{minipage}{.28\linewidth}
+        \large \textbf{Python tools I used}
+        \normalsize
+        \begin{itemize}
+          \item Git, Pycharm, Jupyter
+          \item Pandas, numpy
+          \item Keras, TensorFlow
+          \item Scikit-learn, Scipy
+          \item OpenAI, Mujoco 
+          \item Mpl, Bokeh, Plotly
+          
+        \end{itemize}
+    \end{minipage} & 
+    \begin{minipage}{.24\linewidth}
+        \large \textbf{I researched} 
+        \normalsize
+        \begin{itemize}
+          \item \href{https://youtu.be/fq_uxGyuVhU?t=10m44s}{Atari Games}
+          \item \href{https://youtu.be/jpXq-NCg1-E}{Sega Games}
+          \item \href{https://www.youtube.com/watch?v=kSyae8URr54&t=79s}{Optimization}
+          \item \href{https://www.youtube.com/watch?v=J9kW1lhT06A}{Multi-agent flight}
+          \item \href{https://www.youtube.com/watch?v=R61FRUf-F6M}{Path finding}
+          \item \href{https://youtu.be/HLbThk624jI?t=39s}{Low prob. sampling}
+         
+        \end{itemize}
+    \end{minipage}
+\end{tabular}
+
+
+
+
+\normalsize
+
+
+
+
+\section{Available on GitHub}
+\begin{tabular}{cc}
+ \begin{minipage}{.5\linewidth}
+
+
+   
+    
+        
+        \normalsize
+        \begin{itemize}
+          \item \href{https://github.com/Guillem-db/PyconEs-2016/blob/master/PSAD\%20Cosmic\%20Billiards.ipynb}{Physics}: \emph{Calculating the trajectory of an spacecraft.}\\
+          \item \href{https://github.com/Guillem-db/graphs-and-network-analysis/blob/master/1\%20-\%20Geant\%20network\%20and\%20introduction\%20to\%20graph\%20theory.ipynb}{Networks}: \emph{Analyzing the GEANT network using graph theory.}\\
+          
+          \item \href{https://github.com/Guillem-db/lectures-on-AI/blob/master/1\%20-\%20Introduction\%20to\%20AI.ipynb}{Artificial intelligence}: \emph{Introduction to reinforcement learning.}\\
+          
+          \item \href{https://github.com/Guillem-db/NLP/blob/master/Assignment\%201.ipynb}{NLP}: \emph{Analyzing a corpus using Natural Language Processing.}\\
+          
+          \item \href{https://github.com/HCsoft-RD/Optimization}{Optimization}: \emph{Notebooks on benchmarking global optimization algorithms.}\\
+          
+          \item \href{https://github.com/Guillem-db/Seguridad-de-redes}{Hacking}: \emph{How to build a JavaScript-based port scanner.}\\
+          
+          \item \href{https://github.com/Guillem-db/Smart-cities/blob/master/SmartCities.ipynb}{Teaching}: \emph{A tutorial on smart cities network design.}\\
+          
+          \item \href{https://github.com/BielStela/InsideAirbnb/tree/master/notebooks}{Data analysis}: \emph{Analyzing data from Airbnb.}        
+         
+        \end{itemize}
+\end{minipage}&
+
+\begin{minipage}{.45\linewidth}
+
+
+\begin{itemize}
+          \item \href{https://github.com/HCsoft-RD/shaolin/blob/master/examples/GraphPlot.ipynb}{Financial markets}: \emph{Analyzing correlation matrices of Forex market data.}\\
+          \item \href{https://github.com/BielStela/InsideAirbnb/blob/master/notebooks/Interactive\%20Map.ipynb}{Plotting data on maps}: \emph{Interactive maps displaying data from Airbnb.}\\
+          \item \href{https://github.com/HCsoft-RD/shaolin/blob/master/examples/Scatter\%20Plot\%20introduction.ipynb}{Interactive plots}: \emph{Dashboards used to visualize interactive scatter plots.}\\
+          \item \href{https://github.com/Guillem-db/PyData-Bcn-2017}{Social networks analysis}: \emph{Data wrangling to build machine learning features using network theory.}\\
+          
+          \item \href{https://github.com/Guillem-db/docker-base}{Docker container}: \emph{Bleeding edge TensorFlow compiled for Python 3.7.}\\
+          
+          \end{itemize}
+        \Large \underline{Other Activities}\\
+        \normalsize
+        \begin{itemize}
+          \item \textbf{PyData Mallorca organizer} since Feb 2017.\\
+          \item \textbf{I love teaching science and Python} in workshops, lectures, and as a private teacher.\\
+          
+          
+        \end{itemize}
+        
+   
+    \end{minipage}
+\end{tabular}
+
+    
+
+
+
+
+
+\end{document}
+
+\begin{minipage}{.76\linewidth}
+\includegraphics[width=15cm, height=5cm]{data_skills}
+\end{minipage}\\
+
+%Section: Languages
+\section{Mas cosas}
+\begin{tabular}{rl}
+\textsc{English:}&Working proficiency\\
+\textsc{Spanish:}&Native\\
+\textsc{Catalan:}&Native\\
+\end{tabular}
+
+%Section: Education
+\section{Education}
+\begin{tabular}{rl}
+
+\textsc{Oct.} 2016 & Degree Telecom. engineering: spec. in \textsc{Telematics}, \textbf{Politechnic Univ. of Catalonia}\\&\footnotesize{\textit{Thesis: 'Time series and graph analysis in the Jupyter notebook'}}\\
+\end{tabular}
+
+
+%Section: Languages
+\section{Languages}
+\begin{tabular}{rl}
+\textsc{English:}&Working proficiency\\
+\textsc{Spanish:}&Native\\
+\textsc{Catalan:}&Native\\
+\end{tabular}
+
+\section{Science-related skillset}
+
+\includegraphics[width=17cm, height=5cm]{personal_skills}
+\includegraphics[width=17cm, height=8cm]{data_skills}
+
+
+
+\textsc{Feb 2017 - Present} & \textbf{Research consultant} at \textsc{Universidad Miguel Hernández}, Elche \\&\emph{Grupo de excelencia investigadora on operations research and complex systems analysis}\\\multicolumn{2}{c}{}\\
+
+\textsc{Feb 2017 - Present} & \textbf{PyData Mallorca organiser}, Palma de Mallorca \\\\\multicolumn{2}{c}{}\\
+
+\section{\\Tools}
+\begin{tabular}{ccc}
+ \begin{minipage}{.30\linewidth}
+        \large Data analysis\\
+        \normalsize
+        \begin{itemize}
+          \item Numpy
+          \item Pandas
+          \item Scipy
+          \item TensorFlow
+          \item Scikit-learn
+          \item Keras
+          \item Openai
+        \end{itemize}
+    \end{minipage} & 
+    \begin{minipage}{.28\linewidth}
+        \large Visualization\\
+        \normalsize
+        \begin{itemize}
+          \item Bokeh
+          \item Matplotlib
+          \item Plotly
+          \item GGplot
+          \item Holowievs
+          \item Datashader
+          \item Geoviews
+        \end{itemize}
+    \end{minipage} & 
+    \begin{minipage}{.30\linewidth}
+        \large Other\\
+        \normalsize
+        \begin{itemize}
+          \item Linux (Ubuntu \& Kali)
+          \item IDEs: Jupyter, Eclipse, Spyder
+          \item Excel
+          \item Git
+          \item SPSS
+          \item Tableau
+          \item Amazon EC2
+        \end{itemize}
+    \end{minipage}
+\end{tabular}
+
+\multicolumn{2}{c}{\Large Education} \\\multicolumn{2}{c}{}\\
+ \textsc{Oct. 2016} & \textbf{MSEE}, \emph{Polytechnic Univ. of Catalonia}\\&\footnotesize{\textit{Thesis: 'Time series and graph analysis in the Jupyter notebook'}}\\\multicolumn{2}{c}{}\\
+ 
+ 
+ \Large{\underline{Artificial intelligence Research}}\\
+\normalsize
+
+I have spend the last four years \href{http://entropicai.blogspot.com.es/2016/02/folding-proteins-with-fractal.html}{collaborating} in the development of a new mathematical framework for solving operations research and artificial intelligence problems. This approach based on \href{http://www.alexwg.org/publications/PhysRevLett_110-168702.pdf}{causal entropic forces} allows us to solve \href{https://www.youtube.com/watch?v=HLbThk624jI}{control theory} problems on \href{https://www.youtube.com/watch?v=4uP-kcqcM1g}{stochastic environments}, \href{https://www.youtube.com/watch?v=J9kW1lhT06A}{multi-agent} environments, and \href{https://www.youtube.com/user/finaysergio/videos?view=0&sort=dd&shelf_id=0}{many other} tasks.\\
+I have also worked in problems such as \href{https://www.youtube.com/watch?v=AoiGseO7g1I&t=6s}{path finding}, the unit commitment problem (UCP), and numerical simulations.\\\
+
+
+\begin{tabular}{p{5cm}p{12cm}}
+  \begin{minipage}{\linewidth}
+\includegraphics[width=4.25cm, height=3.5cm]{radar_no_bound}
+\end{minipage} &
+\begin{minipage}{\linewidth}
+    
+\par{
+I am a young data scientist with strong background in Python programming and a highly motivated proactive learner. My job as a data scientist provided me with wide experience in Financial markets, Network analysis, Optimization, and Artificial Intelligence, as well as proficient Python coding skills. If you can think of a problem, I will not stop until coding a solution.
+}
+
+\end{minipage} 
+\end{tabular}
